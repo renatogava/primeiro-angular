@@ -1,0 +1,11 @@
+:host {
+    background: #999999;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    color: #d10d0d;
+}

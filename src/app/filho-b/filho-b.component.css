@@ -1,0 +1,9 @@
+* {
+    color: #25ba25
+}
+
+:host {
+    border: 1px solid #25ba25;
+    display: inline-block;
+    padding: 15px;
+}
