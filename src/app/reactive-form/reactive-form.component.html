@@ -1,0 +1,45 @@
+<h2>Formulário Reactive</h2>
+
+<form [formGroup]="profileForm" (ngSubmit)="submitForm()">
+
+    <label for="name">Nome:</label>
+    <input id="name" type="text" formControlName="name">
+
+    <label for="cpf">CPF:</label>
+    <input id="cpf" type="text" formControlName="cpf">
+
+    <div formGroupName="address">
+        <h2>Endereço</h2>
+
+        <label for="street">Rua: </label>
+        <input id="street" type="text" formControlName="street">
+
+        <label for="city">Cidade: </label>
+        <input id="city" type="text" formControlName="city">
+
+        <label for="state">Estado: </label>
+        <input id="state" type="text" formControlName="state">
+
+        <label for="zip">CEP: </label>
+        <input id="zip" type="text" formControlName="zip">
+    </div>
+
+    <div formArrayName="apelidos">
+        <h2>Apelidos</h2>
+
+        <div *ngFor="let apelido of apelidos.controls; let i=index">
+            <label for="apelido-{{ i }}">Apelido:</label>
+            <input id="apelido-{{ i }}" type="text" [formControlName]="i">
+        </div>
+
+        <button type="button" (click)="adicionarApelido()">Adicionar Apelido</button>
+    </div>
+
+    <button type="submit" class="botao verde" [disabled]="!profileForm.valid">Salvar</button>
+
+    <p>Status: {{ profileForm.status }}</p>
+</form>
+
+<p>Seu nome é {{profileForm.controls.name.value}}</p>
+
+<p><button (click)="atualizarProfile()">Preencher perfil</button></p>

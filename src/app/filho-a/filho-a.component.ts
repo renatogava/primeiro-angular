@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filho-a',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class FilhoAComponent {
 
+  @Input() texto = '';
+
+  @Output() textoPreenchido = new EventEmitter<string>();
+
+  enviar(value: string) {
+    this.textoPreenchido.emit(value);
+  }
 }

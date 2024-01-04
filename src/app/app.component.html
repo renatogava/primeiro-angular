@@ -1,5 +1,21 @@
 <h1>Este é o Template Principal</h1>
 
+<nav>
+    <a routerLink="hello-world" routerLinkActive="active" ariaCurrentWhenActive="page">Hello World</a>
+    <a routerLink="data-binding" routerLinkActive="active" ariaCurrentWhenActive="page">Exemplos de Data binding</a>
+    <a routerLink="directives" routerLinkActive="active" ariaCurrentWhenActive="page">Exemplos de Diretivas</a>
+    <a routerLink="customers" routerLinkActive="active" ariaCurrentWhenActive="page">Lista de Clientes</a>    
+    <a routerLink="reactive-form" routerLinkActive="active" ariaCurrentWhenActive="page">Reactive Form</a>    
+    <a routerLink="template-form" routerLinkActive="active" ariaCurrentWhenActive="page">Template Form</a>    
+    <a routerLink="weather" routerLinkActive="active" ariaCurrentWhenActive="page">Clima</a>    
+    <a routerLink="pipes" routerLinkActive="active" ariaCurrentWhenActive="page">Pipes</a>    
+
+</nav>
+
 <router-outlet></router-outlet>
 
 <p>aqui é o final do template principal</p>
+
+<p>pode acessar Exemplos de Data Binding? 
+    <input type="checkbox" [checked]="podeAcessar" (change)="alterarAcesso($event)">
+</p>

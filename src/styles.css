@@ -12,12 +12,22 @@ p {
     font-size: 18px;
 }
 
+input[type=text],
+select {
+    height: 26px;
+    border-radius: 15px;
+    border: 1px solid #b8b8b8;
+    margin-bottom: 5px;
+    padding: 0 15px
+}
+
 .botao {
     border: 0;
     padding: 15px;
     border-radius: 45px;
     display: block;
     margin: 15px 0;
+    cursor: pointer
 }
 
 .vermelho {
@@ -28,4 +38,9 @@ p {
 .verde {
     background: #0dd114;
     color: #fff;
+}
+
+.botao:disabled {
+    background: #c9c9c9;
+    cursor: default
 }

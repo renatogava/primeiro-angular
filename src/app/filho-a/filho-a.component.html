@@ -1,1 +1,6 @@
-<p>filho-a works!</p>
+<h2>Filho A</h2>
+
+<p *ngIf="texto">Esse texto veio do pai: {{texto}}</p>
+
+<p>Texto pro pai: <input type="text" #caixafilha></p>
+<button type="button" (click)="enviar(caixafilha.value)">Enviar pro pai</button>

@@ -1,0 +1,13 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.ng-valid[required] {
+    border: 1px solid #42A948;
+}
+
+.ng-invalid:not(.ng-pristine, form) {
+    border: 1px solid #a94442;
+}
